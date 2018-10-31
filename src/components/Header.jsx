@@ -1,20 +1,18 @@
-import React from 'react';
-import Logo from "./Logo";
-import Navigation from "./Navigation";
+import React, { Component } from 'react';
+import { Logo, Navigation } from '../components';
 
 
-
-class Header extends React.Component {
+class Header extends Component {
     render() {
         return (
-            <nav className="uk-navbar-container uk-margin">
+            <nav className="uk-navbar-container uk-margin" data-uk-navbar>
                 <div className="uk-navbar-left">
-                    <Logo/>
-                    <Navigation/>
+                    <Logo />
+                    <Navigation />
                 </div>
             </nav>
-
         );
     }
 }
+
 export default Header;

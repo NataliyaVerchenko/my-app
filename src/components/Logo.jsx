@@ -1,13 +1,9 @@
 import React from 'react';
+import {  Link } from "react-router-dom"
 
-
-class Logo extends React.Component {
-    render() {
-        return (
-            <div>
-                <a className="uk-navbar-item uk-logo" href="index.html">Logo</a>
-            </div>
-        );
-    }
+export default function Logo() {
+    return (
+        <Link className="uk-navbar-item uk-logo" to="/">Logo</Link>
+    );
 }
-export default Logo;
+

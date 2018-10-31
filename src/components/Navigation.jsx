@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 
-
-class Navigation extends React.Component {
-
+export default class Navination extends Component {
     render() {
         return (
             <ul className="uk-navbar-nav">
-                <li className="uk-active"><a href="posts.html">Posts</a></li>
-                <li><a href="users.html">Users</a></li>
-                <li><a href="photos.html">Photos</a></li>
-                <li><a href="albums.html">Albums</a></li>
-                <li><a href="todos.html">Todos</a></li>
-                <li><a href="comments.html">Comments</a></li>
+                <li className="uk-active"><Link to="/posts">Posts</Link></li>
+                <li><Link to="/users">Users</Link></li>
+                <li><Link to="/photos">Photos</Link></li>
+                <li><Link to="/albums">Albums</Link></li>
+                <li><Link to="/todos">Todos</Link></li>
+                <li><Link to="/comments">Comments</Link></li>
             </ul>
         );
     }
 }
-export default Navigation;
+

@@ -1,23 +1,22 @@
-import React from 'react';
+import React,{Component} from 'react';
+import {  Link } from "react-router-dom"
 
-
-class Card extends React.Component {
-    render() {
+export default class Card extends Component{
+    render(){
+        let data = this.props.data
         return (
-            <div>
-                <div className="uk-card uk-card-default uk-margin-medium-bottom">
-                    <div className="uk-card-header">
-                        <h3 className="uk-card-title uk-margin-remove-bottom">Title</h3>
-                    </div>
-                    <div className="uk-card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div className="uk-card-footer">
-                        <a href="https://classroom.google.com/u/0/c/MTU5NDYyMjIxMzha" className="uk-button uk-button-text">Read more</a>
-                    </div>
+            <div className="uk-card uk-card-default uk-margin-medium-bottom">
+                <div className="uk-card-header">
+                    <h3 className="uk-card-title uk-margin-remove-bottom">{data.title.toUpperCase()}</h3>
+                </div>
+                <div className="uk-card-body">
+                    <p>{data.body}</p>
+                </div>
+                <div className="uk-card-footer">
+                    <Link to={`/posts/${data.id}`} className="uk-button uk-button-text">Read more</Link>
                 </div>
             </div>
-        );
+        )
     }
+
 }
-export default Card;
